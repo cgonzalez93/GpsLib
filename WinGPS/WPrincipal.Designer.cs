@@ -35,17 +35,26 @@
             this.btnProcesar = new System.Windows.Forms.Button();
             this.txtAreaInput = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtAreaOut = new System.Windows.Forms.TextBox();
+            this.txtTrama = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtImei = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEvento = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtTiempo = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtNaveacion = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -128,7 +137,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.txtAreaOut);
+            this.groupBox3.Controls.Add(this.txtTrama);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(375, 10);
@@ -138,14 +147,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Trama";
             // 
-            // txtAreaOut
+            // txtTrama
             // 
-            this.txtAreaOut.BackColor = System.Drawing.Color.White;
-            this.txtAreaOut.Location = new System.Drawing.Point(6, 21);
-            this.txtAreaOut.Multiline = true;
-            this.txtAreaOut.Name = "txtAreaOut";
-            this.txtAreaOut.Size = new System.Drawing.Size(337, 42);
-            this.txtAreaOut.TabIndex = 2;
+            this.txtTrama.BackColor = System.Drawing.Color.White;
+            this.txtTrama.Location = new System.Drawing.Point(6, 21);
+            this.txtTrama.Multiline = true;
+            this.txtTrama.Name = "txtTrama";
+            this.txtTrama.Size = new System.Drawing.Size(337, 42);
+            this.txtTrama.TabIndex = 2;
             // 
             // groupBox4
             // 
@@ -172,34 +181,100 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.txtEvento);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(375, 98);
+            this.groupBox5.Location = new System.Drawing.Point(375, 95);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(501, 62);
+            this.groupBox5.Size = new System.Drawing.Size(261, 62);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Lat -Long";
+            this.groupBox5.Text = "Evento";
             // 
-            // textBox2
+            // txtEvento
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(6, 21);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 27);
-            this.textBox2.TabIndex = 2;
+            this.txtEvento.BackColor = System.Drawing.Color.White;
+            this.txtEvento.Location = new System.Drawing.Point(6, 21);
+            this.txtEvento.Multiline = true;
+            this.txtEvento.Name = "txtEvento";
+            this.txtEvento.Size = new System.Drawing.Size(236, 27);
+            this.txtEvento.TabIndex = 2;
             // 
-            // textBox3
+            // groupBox6
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(264, 21);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 27);
-            this.textBox3.TabIndex = 3;
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(375, 163);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(501, 62);
+            this.groupBox6.TabIndex = 5;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Lat -Long";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(264, 21);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(220, 27);
+            this.textBox1.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(6, 21);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(236, 27);
+            this.textBox4.TabIndex = 2;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox7.Controls.Add(this.txtTiempo);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.ForeColor = System.Drawing.Color.White;
+            this.groupBox7.Location = new System.Drawing.Point(648, 95);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(228, 62);
+            this.groupBox7.TabIndex = 5;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Hora";
+            // 
+            // txtTiempo
+            // 
+            this.txtTiempo.BackColor = System.Drawing.Color.White;
+            this.txtTiempo.Location = new System.Drawing.Point(6, 21);
+            this.txtTiempo.Multiline = true;
+            this.txtTiempo.Name = "txtTiempo";
+            this.txtTiempo.Size = new System.Drawing.Size(205, 27);
+            this.txtTiempo.TabIndex = 2;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox8.Controls.Add(this.txtNaveacion);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.ForeColor = System.Drawing.Color.White;
+            this.groupBox8.Location = new System.Drawing.Point(375, 231);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(198, 62);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Navigation receiver warning";
+            // 
+            // txtNaveacion
+            // 
+            this.txtNaveacion.BackColor = System.Drawing.Color.White;
+            this.txtNaveacion.Location = new System.Drawing.Point(6, 21);
+            this.txtNaveacion.Multiline = true;
+            this.txtNaveacion.Name = "txtNaveacion";
+            this.txtNaveacion.Size = new System.Drawing.Size(176, 27);
+            this.txtNaveacion.TabIndex = 2;
             // 
             // WPrincipal
             // 
@@ -208,6 +283,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(891, 487);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -227,6 +305,12 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -239,12 +323,18 @@
         private System.Windows.Forms.TextBox txtAreaInput;
         private System.Windows.Forms.Button btnProcesar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtAreaOut;
+        private System.Windows.Forms.TextBox txtTrama;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtImei;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEvento;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtTiempo;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox txtNaveacion;
     }
 }
 
