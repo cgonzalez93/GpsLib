@@ -12,29 +12,67 @@ namespace Gps.Core.Util
 
         {
             string ascii = string.Empty;
-            try
-            {
-                //string ascii = string.Empty;
+            string imei = hexString.Substring(0, 12);
+            string eventt = hexString.Substring(13, 4);
+            string hex = hexString.Substring(17).ToLower();
 
-                for (int i = 0; i < hexString.Length; i += 2)
+            string symbols = " !\"#$%&'()*+,-./0123456789:;<=>?@";
+            string loAZ = "abcdefghijklmnopqrstuvwxyz";
+            symbols += loAZ.ToUpper();
+            symbols += "[\\]^_`";
+            symbols += loAZ;
+            symbols += "{|}~";
+            string text = string.Empty;
+            int i = 0;
+
+            for (i = 0; i < hex.Length; i += 2)
+            {
+                var char1 = hex[i];
+                if (char1 == ':')
                 {
-                    String hs = string.Empty;
-
-                    hs = hexString.Substring(i, 2);
-                    uint decval = Convert.ToUInt32(hs, 16);
-                    char character = Convert.ToChar(decval);
-                    ascii += character;
-
+                    i++;
+                    char1 = hex[i];
                 }
+                char char2 = hex[i++];
+                int num1 = hex[char1];
+                int num2 = hex[char2];
+                int value = num1 << 4;
+                value = value | num2;
 
-                return ascii;
+                int valueInt = Convert.ToInt32(value);
+                int symbolIndex = valueInt - 32;
+                char ch = '?';
+                if (symbolIndex >= 0 && value <= 126)
+                {
+                    ch = symbols[symbolIndex];
+                }
+                text += ch;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            return text;
+            //try
+            //{
+            //    //string ascii = string.Empty;
 
-            return ascii;
+            //    for (int i = 0; i < hex.Length; i += 2)
+            //    {
+            //        String hs = string.Empty;
+
+            //        hs = hexString.Substring(i, 2);
+            //        int decval = Convert.ToInt32(hs, 16);
+            //        char character = Convert.ToChar(decval);
+            //        //Console.WriteLine("val = [{0}] and val2 = [{1}]",character,decval);
+            //        ascii += character;
+
+            //    }
+
+            //    return ascii;
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            //return text;
 
         }
 
