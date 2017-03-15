@@ -41,8 +41,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtEvento = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLonguitud = new System.Windows.Forms.TextBox();
+            this.txtLatitud = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtTiempo = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -203,8 +203,8 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Controls.Add(this.txtLonguitud);
+            this.groupBox6.Controls.Add(this.txtLatitud);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.White;
             this.groupBox6.Location = new System.Drawing.Point(375, 163);
@@ -214,23 +214,23 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Lat -Long";
             // 
-            // textBox1
+            // txtLonguitud
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(264, 21);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 27);
-            this.textBox1.TabIndex = 3;
+            this.txtLonguitud.BackColor = System.Drawing.Color.White;
+            this.txtLonguitud.Location = new System.Drawing.Point(264, 21);
+            this.txtLonguitud.Multiline = true;
+            this.txtLonguitud.Name = "txtLonguitud";
+            this.txtLonguitud.Size = new System.Drawing.Size(220, 27);
+            this.txtLonguitud.TabIndex = 3;
             // 
-            // textBox4
+            // txtLatitud
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(6, 21);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(236, 27);
-            this.textBox4.TabIndex = 2;
+            this.txtLatitud.BackColor = System.Drawing.Color.White;
+            this.txtLatitud.Location = new System.Drawing.Point(6, 21);
+            this.txtLatitud.Multiline = true;
+            this.txtLatitud.Name = "txtLatitud";
+            this.txtLatitud.Size = new System.Drawing.Size(236, 27);
+            this.txtLatitud.TabIndex = 2;
             // 
             // groupBox7
             // 
@@ -329,8 +329,8 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtEvento;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLonguitud;
+        private System.Windows.Forms.TextBox txtLatitud;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox txtTiempo;
         private System.Windows.Forms.GroupBox groupBox8;
