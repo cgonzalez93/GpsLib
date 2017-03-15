@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gps.Core.Util;
+using GpsLibs.Util;
+using GpsLibs;
+using GpsLib;
 
 namespace WinGPS
 {
@@ -20,7 +22,11 @@ namespace WinGPS
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            this.txtAreaOut.Text = Convertt.HEXToASCII(this.txtAreaInput.Text.Trim());
+            String trama =this.txtAreaInput.Text.Trim();
+            if (trama.IsHexadecimal()) throw new ArgumentException("No Es un Hexadecimal");
+            GpsCore gpsc = Traductor.Translate(trama);
+            
+            this.txtImei.Text =gpsc.Imei ;
         }
     }
 }
