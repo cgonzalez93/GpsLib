@@ -100,7 +100,7 @@ namespace GpsLibs.Util
 
         public static string HxToAscii(string hx)
         {
-            if (!hx.IsHexadecimal()) throw new ArgumentException("No Es un HExadecimal");
+            if (!hx.IsHexadecimal()) throw new ArgumentException("No Es un Hexadecimal");
             StringBuilder sb = new StringBuilder();
                 for (int i = 0; i <= hx.Length - 2; i += 2)
                 {
