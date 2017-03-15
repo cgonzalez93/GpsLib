@@ -1,7 +1,7 @@
 ﻿
 using System;
 using GpsLibs.Util;
-
+using System.Diagnostics;
 
 namespace GpsLib
 {
@@ -21,13 +21,20 @@ namespace GpsLib
             string AScci = Convertt.HxToAscii(trama.Substring(17).ToString());
             gps.Trama = AScci;
             string[] Datos= AScci.Split(',');
+            for (int i = 0; i < Datos.Length; i++)
+            {
+                Debug.WriteLine("val["+i+"] = "+Datos[i]);
+            }
             string time = Datos[0].ToString();
-            string nav = Datos[1].ToString();
-            gps.Tiempo = "Time of fix "+time.Substring(0,2)+":"+time.Substring(2,2) + ":"+time.Substring(4) + " COT";
-            gps.Navegacion = nav.Equals("A") ? "OK" : "WARNING";
-
-
-
+            gps.Tiempo = "Time of fix "+time.Substring(0,2)+":"+time.Substring(2,2) + ":"+time.Substring(4) + " UTC";
+            gps.Navegacion = Datos[1].ToString().Equals("A") ? "OK" : "WARNING";
+            string lat = Datos[2].ToString();
+            string lon = Datos[4].ToString();
+            gps.Latitud = "Latitude " + lat.Substring(0, 2) + " deg. " + lat.Substring(3) + " min North";
+            gps.Longitud = "Longitude  " + lon.Substring(0, 3) + " deg. " + lon.Substring(4) + " min West";
+            gps.Velocidad = Datos[6].ToString();
+            gps.Curso = Datos[7].ToString();
+            gps.Fecha = Datos[8].ToString();
 
 
             return gps;

@@ -16,8 +16,8 @@ namespace GpsLib
         public string Navegacion { get; set; }
         public string Latitud { get; set; }
         public string Longitud { get; set; }
-        public double Velocidad { get; set; }
-        public double Curso { get; set; }
+        public string Velocidad { get; set; }
+        public string Curso { get; set; }
         public string Fecha { get; set; }
         public string Variacion { get; set; }
         public string Mandatory { get; set; }

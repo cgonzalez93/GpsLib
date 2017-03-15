@@ -33,6 +33,8 @@ namespace WinGPS
                 this.txtTrama.Text = gpsc.Trama;
                 this.txtTiempo.Text = gpsc.Tiempo;
                 this.txtNaveacion.Text = gpsc.Navegacion;
+                this.txtLatitud.Text = gpsc.Latitud;
+                this.txtLonguitud.Text = gpsc.Longitud;
             }
             catch (Exception ex)
             {
