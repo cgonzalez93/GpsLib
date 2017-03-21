@@ -35,10 +35,12 @@ namespace WinGPS
                 this.txtNaveacion.Text = gpsc.Navegacion;
                 this.txtLatitud.Text = gpsc.Latitud;
                 this.txtLonguitud.Text = gpsc.Longitud;
+                this.txtVelocidad.Text = gpsc.Velocidad;
+                this.webBrowser1.Navigate(String.Format("http://www.google.com/maps/place/{0},{1}", gpsc.Latitud, gpsc.Longitud));
+
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Error :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

@@ -17,9 +17,7 @@ namespace GpsLibs.Util
                     sb.Append(Convert.ToString(Convert.ToChar(Int32.Parse(hx.Substring(i, 2), System.Globalization.NumberStyles.HexNumber))));
                 }
                 return sb.ToString();
-           
-           
-
         }
+        
     }
 }
