@@ -14,10 +14,10 @@ namespace GpsLib
         public string Trama { get; set; }
         public string Tiempo { get; set; }
         public string Navegacion { get; set; }
-        public string Latitud { get; set; }
-        public string Longitud { get; set; }
+        public double Latitud { get; set; }
+        public double Longitud { get; set; }
         public string Velocidad { get; set; }
-        public string Curso { get; set; }
+        public string Cursor { get; set; }
         public string Fecha { get; set; }
         public string Variacion { get; set; }
         public string Mandatory { get; set; }
